@@ -1,3 +1,7 @@
+// Clippy false positive:
+// https://github.com/rust-lang/rust-clippy/issues/3071
+#![allow(clippy::redundant_closure)]
+
 #[path = "task.rs"]
 mod task;
 
