@@ -4,7 +4,7 @@ use std::fmt::{self, Debug};
 use std::io::{Result, Write};
 use std::rc::Rc;
 use std::sync::Arc;
-use termcolor::{ColorSpec, WriteColor};
+use termcolor::{Color, ColorSpec, WriteColor};
 
 #[readonly::make(doc = oqueue_doc_cfg)]
 #[derive(Clone)]
@@ -35,6 +35,29 @@ impl Task {
             handle: Rc::new(Handle { inner, index }),
             index,
         }
+    }
+
+    pub fn bold(&self) {
+        let mut spec = ColorSpec::new();
+        spec.set_bold(true);
+        let _ = self.apply(|w| w.set_color(&spec));
+    }
+
+    pub fn color(&self, color: Color) {
+        let mut spec = ColorSpec::new();
+        spec.set_fg(Some(color));
+        let _ = self.apply(|w| w.set_color(&spec));
+    }
+
+    pub fn bold_color(&self, color: Color) {
+        let mut spec = ColorSpec::new();
+        spec.set_bold(true);
+        spec.set_fg(Some(color));
+        let _ = self.apply(|w| w.set_color(&spec));
+    }
+
+    pub fn reset_color(&self) {
+        let _ = self.apply(|w| w.reset());
     }
 
     #[doc(hidden)]

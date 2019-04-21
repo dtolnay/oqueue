@@ -37,3 +37,6 @@ mod sequencer;
 mod sync;
 
 pub use crate::sequencer::{Sequencer, Task};
+
+#[doc(no_inline)]
+pub use termcolor::Color;
