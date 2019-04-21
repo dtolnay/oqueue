@@ -11,3 +11,6 @@ termcolor = "1.0"
 [dev-dependencies]
 num_cpus = "1.0"
 rayon = "1.0"
+
+[package.metadata.docs.rs]
+rustdoc-args = ["--cfg", "oqueue_doc_cfg"]

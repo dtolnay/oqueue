@@ -6,7 +6,7 @@ use std::rc::Rc;
 use std::sync::Arc;
 use termcolor::{ColorSpec, WriteColor};
 
-#[readonly::make]
+#[readonly::make(doc = oqueue_doc_cfg)]
 #[derive(Clone)]
 pub struct Task {
     handle: Rc<Handle>,
