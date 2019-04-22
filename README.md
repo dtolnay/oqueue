@@ -11,7 +11,7 @@ currently printing output.
 
 ```toml
 [dependencies]
-oqueue = "0.0"
+oqueue = "0.1"
 ```
 
 <br>
@@ -150,8 +150,8 @@ evaluating <b>./target</b>
   - The [`oqueue::Task`][Task] documentation shows the APIs for setting
     output color and writing output to a task.
 
-[Sequencer]: https://docs.rs/oqueue/0.0/oqueue/struct.Sequencer.html
-[Task]: https://docs.rs/oqueue/0.0/oqueue/struct.Task.html
+[Sequencer]: https://docs.rs/oqueue/0.1/oqueue/struct.Sequencer.html
+[Task]: https://docs.rs/oqueue/0.1/oqueue/struct.Task.html
 
 <br>
 
