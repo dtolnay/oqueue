@@ -121,6 +121,7 @@
 //! evaluating <b>./Cargo.toml</b>
 //! evaluating <b>./LICENSE-APACHE</b>
 //! evaluating <b>./LICENSE-MIT</b>
+//! evaluating <b>./README.md</b>
 //! evaluating <b>./examples</b>
 //! evaluating <b>./src</b>
 //!   <b><font color="#dd0000">ERROR</font></b>: path contains the letter 'c'
