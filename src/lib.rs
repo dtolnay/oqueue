@@ -2,6 +2,8 @@
 //! arbitrary number of tasks to make progress, even ones other than the task
 //! currently printing output.
 //!
+//! <br>
+//!
 //! # Use case
 //!
 //! This crate addresses a seemingly narrow use case, but it is one I have hit
@@ -16,6 +18,8 @@
 //! at the end, all output is unnecessarily delayed and the application can feel
 //! lurchy and unresponsive because none of the output is seen in real time.
 //!
+//! <br>
+//!
 //! # Objective
 //!
 //!   - We have an ordered sequence of tasks 0..N.
@@ -29,6 +33,8 @@
 //!   - We want all output to be printed as soon as possible, meaning real time
 //!     for exactly one task at a time and deferred until replacement of the
 //!     realtime task for other tasks.
+//!
+//! <br>
 //!
 //! # Example
 //!
@@ -121,6 +127,8 @@
 //! evaluating <b>./target</b>
 //! </pre>
 //!
+//! <br>
+//!
 //! # Further reading
 //!
 //!   - The [`oqueue::Sequencer`][Sequencer] documentation covers some different
@@ -128,6 +136,8 @@
 //!
 //!   - The [`oqueue::Task`][Task] documentation shows the APIs for setting
 //!     output color and writing output to a task.
+//!
+//! <br>
 
 #![cfg_attr(oqueue_doc_cfg, feature(doc_cfg))]
 
