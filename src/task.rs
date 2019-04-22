@@ -6,11 +6,34 @@ use std::rc::Rc;
 use std::sync::Arc;
 use termcolor::{Color, ColorSpec, WriteColor};
 
+/// Unit of work arranged by a Sequencer.
+///
+/// Use the standard library `write!` or `writeln!` macros for writing the
+/// output of a task. Additionally this type provides some methods for setting
+/// the color of task output.
+///
+/// Refer to the crate-level documentation and the documentation of the
+/// Sequencer type for the recommended patterns of launching tasks.
+///
+/// ```
+/// use oqueue::{Color::Blue, Task};
+///
+/// fn work(task: Task) {
+///     task.color(Blue);
+///     writeln!(task, "hello from task #{}", task.index);
+/// }
+/// ```
 #[readonly::make(doc = oqueue_doc_cfg)]
 #[derive(Clone)]
 pub struct Task {
     handle: Rc<Handle>,
 
+    /// Index of the current task. This is a sequential counter that begins at 0
+    /// and increments by 1 for each successively started task. It may be
+    /// helpful in determining what work this task is responsible for
+    /// performing.
+    ///
+    /// This field is read-only; writing to its value will not compile.
     #[readonly]
     pub index: usize,
 }
@@ -37,18 +60,21 @@ impl Task {
         }
     }
 
+    /// Set output to appear in bold uncolored.
     pub fn bold(&self) {
         let mut spec = ColorSpec::new();
         spec.set_bold(true);
         let _ = self.apply(|w| w.set_color(&spec));
     }
 
+    /// Set output to appear in color (not bold).
     pub fn color(&self, color: Color) {
         let mut spec = ColorSpec::new();
         spec.set_fg(Some(color));
         let _ = self.apply(|w| w.set_color(&spec));
     }
 
+    /// Set output to appear bold and colored.
     pub fn bold_color(&self, color: Color) {
         let mut spec = ColorSpec::new();
         spec.set_bold(true);
@@ -56,6 +82,7 @@ impl Task {
         let _ = self.apply(|w| w.set_color(&spec));
     }
 
+    /// Set output to non-bold uncolored.
     pub fn reset_color(&self) {
         let _ = self.apply(|w| w.reset());
     }
