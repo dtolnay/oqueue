@@ -120,6 +120,14 @@
 //!   <b><font color="#dd0000">ERROR</font></b>: path contains the letter 'c'
 //! evaluating <b>./target</b>
 //! </pre>
+//!
+//! # Further reading
+//!
+//!   - The [`oqueue::Sequencer`][Sequencer] documentation covers some different
+//!     techniques for distributing work items across tasks.
+//!
+//!   - The [`oqueue::Task`][Task] documentation shows the APIs for setting
+//!     output color and writing output to a task.
 
 #![cfg_attr(oqueue_doc_cfg, feature(doc_cfg))]
 
