@@ -1,7 +1,7 @@
 Non-interleaving output queue
 =============================
 
-[![Build Status](https://api.travis-ci.com/dtolnay/oqueue.svg?branch=master)](https://travis-ci.com/dtolnay/oqueue)
+[![Build Status](https://img.shields.io/github/workflow/status/dtolnay/oqueue/CI/master)](https://github.com/dtolnay/oqueue/actions?query=branch%3Amaster)
 [![Latest Version](https://img.shields.io/crates/v/oqueue.svg)](https://crates.io/crates/oqueue)
 [![Rust Documentation](https://img.shields.io/badge/api-rustdoc-blue.svg)](https://docs.rs/oqueue)
 
