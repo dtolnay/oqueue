@@ -127,7 +127,6 @@ earliest possible including one task in real time at all times.
 <pre>
 evaluating <b>./.git</b>
 evaluating <b>./.gitignore</b>
-evaluating <b>./.travis.yml</b>
 evaluating <b>./Cargo.lock</b>
   <b>ERROR</b>: path contains the letter 'c'
 evaluating <b>./Cargo.toml</b>

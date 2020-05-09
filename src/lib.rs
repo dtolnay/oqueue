@@ -115,7 +115,6 @@
 //! <pre>
 //! evaluating <b>./.git</b>
 //! evaluating <b>./.gitignore</b>
-//! evaluating <b>./.travis.yml</b>
 //! evaluating <b>./Cargo.lock</b>
 //!   <b><font color="#dd0000">ERROR</font></b>: path contains the letter 'c'
 //! evaluating <b>./Cargo.toml</b>
