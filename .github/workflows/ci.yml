@@ -12,10 +12,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        rust: [nightly, beta, stable, 1.33.0]
+        rust: [nightly, beta, stable, 1.36.0, 1.33.0]
     steps:
       - uses: actions/checkout@v2
       - uses: dtolnay/rust-toolchain@master
         with:
           toolchain: ${{matrix.rust}}
+      - run: cargo check
       - run: cargo run --example readme
+        if: matrix.rust != '1.33.0'
