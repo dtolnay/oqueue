@@ -147,6 +147,7 @@
 //!
 //! <br>
 
+#![doc(html_root_url = "https://docs.rs/oqueue/0.1.0")]
 #![cfg_attr(oqueue_doc_cfg, feature(doc_cfg))]
 
 mod sequencer;
