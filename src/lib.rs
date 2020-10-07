@@ -147,7 +147,7 @@
 //!
 //! <br>
 
-#![doc(html_root_url = "https://docs.rs/oqueue/0.1.1")]
+#![doc(html_root_url = "https://docs.rs/oqueue/0.1.2")]
 
 mod sequencer;
 mod sync;
