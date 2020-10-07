@@ -23,7 +23,7 @@ use termcolor::{Color, ColorSpec, WriteColor};
 ///     writeln!(task, "hello from task #{}", task.index);
 /// }
 /// ```
-#[readonly::make(doc = oqueue_doc_cfg)]
+#[readonly::make]
 #[derive(Clone)]
 pub struct Task {
     handle: Rc<Handle>,
