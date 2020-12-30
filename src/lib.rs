@@ -148,6 +148,11 @@
 //! <br>
 
 #![doc(html_root_url = "https://docs.rs/oqueue/0.1.2")]
+#![allow(
+    clippy::module_name_repetitions,
+    clippy::must_use_candidate,
+    clippy::redundant_closure_for_method_calls
+)]
 
 mod sequencer;
 mod sync;
