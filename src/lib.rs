@@ -147,7 +147,7 @@
 //!
 //! <br>
 
-#![doc(html_root_url = "https://docs.rs/oqueue/0.1.4")]
+#![doc(html_root_url = "https://docs.rs/oqueue/0.1.5")]
 #![allow(
     clippy::module_name_repetitions,
     clippy::must_use_candidate,
