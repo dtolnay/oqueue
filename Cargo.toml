@@ -18,5 +18,8 @@ termcolor = "1.0"
 num_cpus = "1.0"
 rayon = "1.0"
 
+[lib]
+doc-scrape-examples = false
+
 [package.metadata.docs.rs]
 targets = ["x86_64-unknown-linux-gnu"]
