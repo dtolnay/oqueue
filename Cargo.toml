@@ -1,6 +1,6 @@
 [package]
 name = "oqueue"
-version = "0.1.5"
+version = "0.1.6"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
 categories = ["concurrency"]
 description = "Non-interleaving multithreaded output queue"
