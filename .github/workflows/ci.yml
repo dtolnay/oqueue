@@ -24,7 +24,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        rust: [nightly, beta, stable, 1.59.0, 1.33.0]
+        rust: [nightly, beta, stable, 1.59.0, 1.56.0]
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v3
@@ -36,7 +36,7 @@ jobs:
         if: matrix.rust == 'nightly'
       - run: cargo check
       - run: cargo run --example readme
-        if: matrix.rust != '1.33.0'
+        if: matrix.rust != '1.56.0'
 
   clippy:
     name: Clippy
