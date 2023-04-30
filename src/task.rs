@@ -137,7 +137,7 @@ impl WriteColor for Task {
 
 impl Drop for Handle {
     fn drop(&mut self) {
-        let mut inner = &mut *self.inner.lock();
+        let inner = &mut *self.inner.lock();
 
         inner.get(self.index).done = true;
 
