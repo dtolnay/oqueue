@@ -11,12 +11,12 @@ repository = "https://github.com/dtolnay/oqueue"
 rust-version = "1.33"
 
 [dependencies]
-readonly = "0.2"
-termcolor = "1.0"
+readonly = "0.2.10"
+termcolor = "1.2"
 
 [dev-dependencies]
-num_cpus = "1.0"
-rayon = "1.0"
+num_cpus = "1.16"
+rayon = "1.7"
 
 [lib]
 doc-scrape-examples = false
