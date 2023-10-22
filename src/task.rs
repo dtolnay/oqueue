@@ -141,7 +141,7 @@ impl Drop for Handle {
 
         inner.get(self.index).done = true;
 
-        while inner.pending.get(0).map_or(false, Output::is_done) {
+        while inner.pending.front().map_or(false, Output::is_done) {
             inner.finished += 1;
             let mut task = inner.pending.pop_front().unwrap();
             let _ = task.buffer.reset();
