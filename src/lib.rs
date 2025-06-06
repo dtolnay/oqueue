@@ -154,6 +154,7 @@
     clippy::must_use_candidate,
     clippy::redundant_closure_for_method_calls
 )]
+#![allow(unknown_lints, mismatched_lifetime_syntaxes)]
 
 mod sequencer;
 mod sync;
